@@ -24,6 +24,23 @@ $(call inherit-product, device/oneplus/fajita/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+# Bootanimation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# LineageOS Stuff
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_BUILD_APERTURE_CAMERA := false
+TARGET_ENABLE_BLUR := false
+TARGET_INCLUDE_MATLOG := false
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_HAS_UDFPS := true
+TARGET_DISABLE_EPPE := true
+
+# AlphaDroid
+ALPHA_BUILD_TYPE := Official
+ALPHA_MAINTAINER := 𝔸𝕂𝕊ℍ𝔸𝕋
+
+# Device Identifier
 PRODUCT_NAME := lineage_fajita
 PRODUCT_DEVICE := fajita
 PRODUCT_MANUFACTURER := OnePlus
