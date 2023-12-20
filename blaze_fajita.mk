@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2018 The LineageOS Project
+# Copyright (C) 2023 The Project Blaze
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,18 +22,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from fajita device
 $(call inherit-product, device/oneplus/fajita/device.mk)
 
-# Inherit some common PixelExperience stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common Project Blaze stuff.
+$(call inherit-product, vendor/blaze/config/common_full_phone.mk)
 
-# PixelExperience Stuff
+# Bootanimation
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := false
-TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
-TARGET_SUPPORTS_QUICK_TAP := true
+
+# Project-Blaze Official Stuff
+BLAZE_BUILD_TYPE := OFFICIAL
+BLAZE_MAINTAINER := AKSHAT
+TARGET_SUPPORTS_BLUR := false
 TARGET_USES_AOSP_RECOVERY := true
 
-PRODUCT_NAME := aosp_fajita
+# GMS
+WITH_GAPPS := true
+
+# Device Identifier
+PRODUCT_NAME := blaze_fajita
 PRODUCT_DEVICE := fajita
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus

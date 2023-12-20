@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_fajita.mk
+    $(LOCAL_DIR)/blaze_fajita.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_fajita-user \
-    aosp_fajita-userdebug \
-    aosp_fajita-eng
+    blaze_fajita-user \
+    blaze_fajita-userdebug \
+    blaze_fajita-eng
